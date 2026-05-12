@@ -2,6 +2,8 @@
 
 ## Analiza bezpieczeństwa obrazu przy użyciu Docker Scout
 
+Bezpieczeństwo obrazu, pod kątem podatności, zweryfikowano narzędziem Docker Scout, uzyskując wynik 0C, 0H, 0M, 0L. Całkowity brak podatności wynika z użycia obrazu scratch, w którym nie ma systemu ani zbędnych plików. W kontenerze została tylko sama odizolowana aplikacja, co całkowicie eliminuje źródła potencjalnych zagrożeń.
+
 ```
 docker scout cves zadanie1:latest
 ```
