@@ -15,6 +15,7 @@ eval $(ssh-agent -s)
 ```
 
 <img width="498" height="88" alt="image" src="https://github.com/user-attachments/assets/7b257f75-2498-43d0-a860-b1619e5548b4" />
+
 ```
 ssh-add /c/Users/Weronika/.ssh/gh_lab6_ed25
 ```
