@@ -66,6 +66,8 @@ docker buildx build \
 ```
 <img width="1090" height="258" alt="image" src="https://github.com/user-attachments/assets/fccf8870-c3c2-468c-80c3-dad7e61cbba8" />
 
+Widoczny błąd wynika z braku wcześniej zapisanego cache'u w rejestrze, co jest sytuacją naturalną podczas pierwszego budowania obrazu i nie przeszkadza w poprawnym zakończeniu procesu.
+
 <img width="1090" height="701" alt="image" src="https://github.com/user-attachments/assets/3483d3ed-d832-40d6-9445-9d213e41fc65" />
 
 ## Weryfikacja struktury manifestu oraz poprawności wykorzystania danych Cache
