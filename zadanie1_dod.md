@@ -79,7 +79,7 @@ docker buildx imagetools inspect docker.io/niro514/test:lab_multi
 Inspekcja manifestu potwierdziła poprawne utworzenie obrazu typu multi-arch obsługującego platformy linux/amd64 oraz linux/arm64
 <img width="1090" height="458" alt="image" src="https://github.com/user-attachments/assets/9ebd1370-bf29-4d22-9537-54fa9deac9c2" />
 
-Ponowne użycie komendy docker buildx w celu weryfikacji mechanizmu Cache
+Ponowne użycie komendy docker buildx w celu weryfikacji mechanizmu Cache, co pokazują statusy CACHED przypisane do poszczególnych warstw oraz znaczące skrócenie czasu trwania całej operacji.
 <img width="1090" height="671" alt="image" src="https://github.com/user-attachments/assets/b3bc15c6-59b3-4305-b686-a935b01c01ff" />
 
 
