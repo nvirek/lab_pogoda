@@ -3,12 +3,6 @@
 ## Analiza bezpieczeństwa obrazu przy użyciu Docker Scout
 
 ```
-docker scout quickview zadanie1:latest
-```
-
-<img width="1090" height="417" alt="image" src="https://github.com/user-attachments/assets/2bd9130a-02d1-4318-83e0-d115eaa27556" />
-
-```
 docker scout cves zadanie1:latest
 ```
 
