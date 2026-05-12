@@ -48,13 +48,39 @@ gh repo create lab_pogoda --public --source=. --remote=origin --push
 
 <img width="1033" height="416" alt="image" src="https://github.com/user-attachments/assets/9ef989da-5bd3-44cd-a9d2-7e5b8b8e0e70" />
 
-##
+## Konfiguracja Buildx do budowania obrazów wieloplatformowych
 
+```
+docker buildx create --name mybuilder --driver docker-container --use --bootstrap
+```
+<img width="945" height="161" alt="image" src="https://github.com/user-attachments/assets/21da9ddc-69f8-4737-9de0-5169bd5b172d" />
 
+## Proces generowania obrazów Multi-arch
 
+```
+docker buildx build \
+  --platform linux/amd64,linux/arm64 \
+  -t docker.io/niro514/test:lab_multi \
+  --ssh default=/c/Users/Weronika/.ssh/gh_lab6_ed25 \
+  --push \
+  --cache-to type=registry,ref=docker.io/niro514/test:cache,mode=max \
+  --cache-from type=registry,ref=docker.io/niro514/test:cache \
+  -f Dockerfile_multi .
+```
+<img width="1090" height="258" alt="image" src="https://github.com/user-attachments/assets/fccf8870-c3c2-468c-80c3-dad7e61cbba8" />
 
+<img width="1090" height="701" alt="image" src="https://github.com/user-attachments/assets/3483d3ed-d832-40d6-9445-9d213e41fc65" />
 
+## Weryfikacja struktury manifestu oraz poprawności wykorzystania danych Cache
 
+```
+docker buildx imagetools inspect docker.io/niro514/test:lab_multi
+```
+
+<img width="1090" height="458" alt="image" src="https://github.com/user-attachments/assets/9ebd1370-bf29-4d22-9537-54fa9deac9c2" />
+
+Ponowne użycie komendy docker buildx w celu weryfikacji mechanizmu Cache
+<img width="1090" height="671" alt="image" src="https://github.com/user-attachments/assets/b3bc15c6-59b3-4305-b686-a935b01c01ff" />
 
 
 
